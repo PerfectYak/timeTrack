@@ -116,7 +116,7 @@ Versioning](https://semver.org/) and are automated with Release Please:
 - `chore:` and `docs:` commits do not create a release by themselves.
 
 Every pushed branch and every pull request targeting `main` is checked on
-Node.js 20 and 22 with a clean install, lint, tests, and a production build.
+Node.js 22 and 24 with a clean install, lint, tests, and a production build.
 After successful checks on `main`, Release Please creates or updates a release
 pull request containing the version bump and `CHANGELOG.md`. Merging that pull
 request creates a `vX.Y.Z` tag and a GitHub Release with source archives.
