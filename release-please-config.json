@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "1cbe657c3fad1f2f89aa33844602e4f679362b44",
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "package-name": "TimeTrack",
+      "changelog-path": "CHANGELOG.md",
+      "include-component-in-tag": false,
+      "include-v-in-tag": true
+    }
+  }
+}
