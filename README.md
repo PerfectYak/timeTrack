@@ -103,6 +103,41 @@ npm run lint
 npm run build
 ```
 
+## Versioning and releases
+
+The application version comes from the root `package.json` and is displayed at
+the bottom of the desktop sidebar. Releases follow [Semantic
+Versioning](https://semver.org/) and are automated with Release Please:
+
+- `fix:` commits produce a patch version;
+- `feat:` commits produce a minor version;
+- commits with `!` after the type or a `BREAKING CHANGE` footer produce a major
+  version;
+- `chore:` and `docs:` commits do not create a release by themselves.
+
+Every pushed branch and every pull request targeting `main` is checked on
+Node.js 20 and 22 with a clean install, lint, tests, and a production build.
+After successful checks on `main`, Release Please creates or updates a release
+pull request containing the version bump and `CHANGELOG.md`. Merging that pull
+request creates a `vX.Y.Z` tag and a GitHub Release with source archives.
+
+The release workflow uses the repository's built-in `GITHUB_TOKEN`. GitHub may
+therefore require a maintainer to approve the CI run created for an automated
+release pull request.
+
+### Recommended GitHub branch protection
+
+After the workflows are available on `main`, configure a branch protection
+rule for `main` under **Settings → Branches**:
+
+1. Require a pull request before merging and disallow direct pushes.
+2. Require the branch to be up to date before merging.
+3. Require both `CI / Node 22` and `CI / Node 24` status checks.
+
+Keep the repository-wide Actions token permission read-only under **Settings →
+Actions → General**. The release workflow grants only its own required
+`contents`, `issues`, and `pull-requests` write permissions.
+
 ## Technology
 
 - Next.js 16 and React 19
