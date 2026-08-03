@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "language": "en",
+  "locale": "en-US",
+  "timezone": "Europe/Budapest",
+  "weekStartsOn": 1,
+  "workingDays": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "dailyTargetMinutes": 480,
+  "lunchBreakMinutes": 30
+}

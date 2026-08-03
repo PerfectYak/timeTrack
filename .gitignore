@@ -1,0 +1,10 @@
+node_modules
+.next
+coverage
+backups/
+data/*.json
+data/*.db
+data/*.db-*
+data/*.migrated.bak
+!data/.gitkeep
+npm-debug.log*
